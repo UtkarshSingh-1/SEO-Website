@@ -1,0 +1,237 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 20px;
+    position: relative;
+    font-weight: bold;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    padding: 0.5em 1em;
+    transition: color 0.3s;
+    position: relative;
+}
+
+.nav-links a:hover {
+    color: #03b7fe; 
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px; 
+    width: 0;
+    height: 2px; 
+    background-color: #8bdaf9; 
+    transition: width 0.3s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 280px;
+    text-align: justify;
+    text-justify: inter-word;
+    border-radius: 20px;
+}
+
+.dropdown-content li {
+    padding: 0.5em 1em;
+    width: 100%;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 0.5em 1em;
+    color: #333;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    color: #078dc2; 
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+}
+
+.nav-icons a {
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+.contact-us {
+    background-color: #007bff;
+    color: white;
+    padding: 0.5em 1em;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-us::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.3);
+    transition: all 0.75s ease-in-out;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.contact-us:hover {
+    background-color: #0056b3;
+    box-shadow: 0 6px 12px rgba(0, 86, 179, 0.3);
+    transform: translateY(-2px);
+}
+
+.contact-us:hover::before {
+    width: 0;
+    height: 0;
+}
+
+.hero {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0 auto;
+    padding: 50px;
+    background-image: url('Picsart_24-07-15_15-53-10-399.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.hero-content {
+    max-width: 50%;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3.5em;
+    margin: 0 0 0.5em;
+    align-items: center;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin: 0 0 1em;
+    color: gray;
+    font-weight: bold;
+}
+
+.cta-button {
+    background-color: #ff5722;
+    color: white;
+    padding: 0.75em 1.5em;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(255, 87, 34, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-button::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.3);
+    transition: all 0.75s ease-in-out;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.cta-button:hover {
+    background-color: #e64a19;
+    box-shadow: 0 6px 12px rgba(230, 74, 25, 0.3);
+    transform: translateY(-2px);
+}
+
+.cta-button:hover::before {
+    width: 0;
+    height: 0;
+}
+
+.svg-list {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.svg-list ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.svg-list li {
+    margin-bottom: 10px;
+}
+
+.svg-list img {
+    width: 40px;
+    height: 40px;
+}
